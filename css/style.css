@@ -15,6 +15,20 @@
 
 /*** Spinner End ***/
 
+/*** More Details button ***/
+#details-content {
+    display: none;
+}
+
+#details-button {
+    display: block;
+}
+
+#hide-button {
+    display: none;
+}
+
+/*** Button End ***/
 
 /*** Button Start ***/
 .btn {
