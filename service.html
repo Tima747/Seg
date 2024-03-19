@@ -226,48 +226,28 @@
                                 <i class="fas fa-ellipsis-h fa-7x mb-4 text-primary"></i>
                                 <h4 class="mb-3">Другие</h4>
                                 <h4 class="mb-3">Наши</h4>
-                                <a class="btn btn-secondary text-white px-5 py-3 rounded-pill" onclick="showPopup()">Услуги</a>
+                                <a class="btn btn-secondary text-white px-5 py-3 rounded-pill open-modal-btn" data-modal-html="<h2>Наши другие услуги</h2>
+                                    <h4>• Разработка проектно-сметной документации проведением государственной экспертизы </h4>
+                                    <h4>• Монтажные работы </h4>
+                                    <h4>• Пуско-наладочные работы</h4>
+                                    <h4>• Обучение персонала заказчика</h4>
+                                    <h4>• Сдача систем в промышленную эксплуатацию </h4>">Услуги</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Затемненный фон -->
-<div class="overlay" id="overlay"></div>
-
-<!-- Всплывающее окно с текстом -->
-<div class="popup" id="popup">
-<div class="popup-close" onclick="hidePopup()"><i class="fas fa-times"></i></div>
-<div class="popup-content">
-    <h2>Наши другие услуги</h2>
-    <h4>•Разработка проектно-сметной документации проведением государственной экспертизы </h4>
-    <h4>•Монтажные работы </h4>
-    <h4>•Пуско-наладочные работы</h4>
-    <h4>•Обучение персонала заказчика</h4>
-    <h4>•Сдача систем в промышленную эксплуатацию </h4>
-</div>
-</div>
-
-<script>
-function showPopup() {
-    document.getElementById('popup').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function hidePopup() {
-    document.getElementById('popup').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-    document.body.style.overflow = '';
-}
-
-// Закрыть всплывающее окно при клике на затемненный фон
-document.getElementById('overlay').addEventListener('click', hidePopup);
-</script>
-
             </div>
         </div>
     </div>
     <!-- Услуги End -->
+
+    <!-- Модальное окно -->
+<div class="modal" id="projectModal">
+    <div class="modal-content">
+        <span class="close-modal-btn">&times;</span>
+        <div id="modal-html" class="modal-text"></div>
+    </div>
+    </div>
 
 
     <!-- Footer Start -->
@@ -346,8 +326,9 @@ document.getElementById('overlay').addEventListener('click', hidePopup);
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+   
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>
